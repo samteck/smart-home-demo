@@ -31,7 +31,7 @@ exports.temperature = function (req, res) {
   Status.findById(id, function (err, status) {
     if (err) return next(err)
     console.log("====>  /temperature call at : " + Date.now() + " from IP Address : " + req.ip)
-    res.send("The temperature is : " + String(status.temperature))
+    res.send("The temperature for " + status.room + " is : " + String(status.temperature))
   })
 }
 
@@ -40,7 +40,7 @@ exports.humidity = function (req, res) {
    Status.findById(id, function (err, status) {
     if (err) return next(err)
     console.log("====>  /humidity call at : " + Date.now() + " from IP Address : " + req.ip)    
-    res.send("The Humidity is : " + String(status.humidity))
+    res.send("The Humidity for " + status.room + " is : " + String(status.humidity))
   })
 }
 
@@ -49,7 +49,7 @@ exports.pir = function (req, res) {
    Status.findById(id, function (err, status) {
     if (err) return next(err)
     console.log("====>  /pir call at : " + Date.now() + " from IP Address : " + req.ip)
-    res.send("The PIR sensor value is : " + String(status.pir))
+    res.send("The PIR sensor value for " + status.room + " is : " + String(status.pir))
   })
 }
 
