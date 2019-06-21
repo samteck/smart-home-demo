@@ -29,5 +29,5 @@ void loop() {
     String json = String("{\"pir\":\"") + String(pir) + String("\",\"temp\":\"") + String(DHT.temperature) + String("\",\"humidity\":\"") + String(DHT.humidity) + String("\"}");
     Serial.println(json);
     
-    delay(1000);//Wait 10 sec before accessing sensor again.
+    delay(5000);//Wait 10 sec before accessing sensor again.
 }
