@@ -23,7 +23,8 @@ IO.setup(speaker,IO.OUT)
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
 # url for sending request on server
-url = 'https://sam.requestcatcher.com/test'
+#url = 'http://54.191.210.230:3000/add'
+url = 'http://smart-parking-load-balancer-805704266.us-west-2.elb.amazonaws.com/add'
 
 # code below will read data from serial, extract each sensor value, do local fog computing
 # then form a JSON string with room information, and send the request to server
